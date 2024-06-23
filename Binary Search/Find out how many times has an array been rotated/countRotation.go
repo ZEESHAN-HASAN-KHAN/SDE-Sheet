@@ -52,7 +52,12 @@ func findKRotation(arr []int, n int) int {
 			}
 			low = mid+1
 		} else {
-			high = high - 1
+			minimum = min(minimum, arr[mid])
+			if minimum != prev {
+				index = mid
+				prev = minimum
+			}
+			high = mid - 1
 		}
 	}
 

@@ -45,7 +45,8 @@ func findMin(nums []int) int {
             ans = min(ans, nums[low])
             low = mid+1
         } else {
-            high = high-1
+            ans = min(ans, nums[mid])
+            high = mid-1
         }
     }
 
